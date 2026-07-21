@@ -2,10 +2,13 @@
 include:
   # ---- Dongle / central (Prospector display) ----
   # Prospector "main" branch targets ZMK v0.3, so the XIAO board id is
-  # seeeduino_xiao_ble. ZMK Studio runs on the dongle (the central).
+  # seeeduino_xiao_ble.
+  # KVM-clean variant: the studio-rpc-usb-uart snippet is intentionally removed
+  # so the dongle enumerates as a plain USB HID keyboard (not a composite
+  # HID+serial device) — composite USB is what confuses KVM switches. USB HID is
+  # kept alive via CONFIG_ZMK_USB in the dongle Kconfig.defconfig. No Studio here.
   - board: seeeduino_xiao_ble
     shield: corne_dongle prospector_adapter
-    snippet: studio-rpc-usb-uart
 
   # ---- Left half, now a PERIPHERAL ----
   - board: nice_nano_v2

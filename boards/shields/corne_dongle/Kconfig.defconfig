@@ -9,6 +9,11 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT
     default y
 
+# Keep USB HID enabled without the studio-rpc-usb-uart snippet, so the dongle
+# still works as a plain USB keyboard through a KVM.
+config ZMK_USB
+    default y
+
 # Left + right halves = 2 peripherals
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
