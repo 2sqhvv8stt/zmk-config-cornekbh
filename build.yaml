@@ -1,41 +1,24 @@
 ---
 include:
-<<<<<<< Updated upstream
-=======
   # ---- Dongle / central (Prospector display) ----
   # Prospector "main" branch targets ZMK v0.3, so the XIAO board id is
   # seeeduino_xiao_ble. ZMK Studio runs on the dongle (the central).
->>>>>>> Stashed changes
   - board: seeeduino_xiao_ble
     shield: corne_dongle prospector_adapter
     snippet: studio-rpc-usb-uart
 
-<<<<<<< Updated upstream
-=======
   # ---- Left half, now a PERIPHERAL ----
->>>>>>> Stashed changes
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
-<<<<<<< Updated upstream
-=======
   # ---- Right half, now a PERIPHERAL ----
->>>>>>> Stashed changes
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
-<<<<<<< Updated upstream
-  - board: nice_nano_v2
-    shield: settings_reset
-
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
-=======
   # ---- settings_reset for every board you flash ----
   - board: nice_nano_v2
     shield: settings_reset
   - board: seeeduino_xiao_ble
     shield: settings_reset
->>>>>>> Stashed changes
