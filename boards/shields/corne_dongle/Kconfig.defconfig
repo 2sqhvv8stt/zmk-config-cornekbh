@@ -9,6 +9,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT
     default y
 
+<<<<<<< Updated upstream
 # left + right halves
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
@@ -17,6 +18,17 @@ config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
 config BT_MAX_CONN
     default 7
 
+=======
+# Left + right halves = 2 peripherals
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+# Peripherals (2) + desired BT profiles (5)
+config BT_MAX_CONN
+    default 7
+
+# Same value as BT_MAX_CONN
+>>>>>>> Stashed changes
 config BT_MAX_PAIRED
     default 7
 
